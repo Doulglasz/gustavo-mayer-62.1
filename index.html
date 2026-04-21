@@ -31,22 +31,23 @@
         <section id="inventario">
             <h2>Cadastro</h2>
             <article>
+                <h3>Formulário</h3>
                 <form>
                 <fieldset>
                     <legend>Entrada Técnica</legend>
                     <label for="nome">Nome do host:</label>
-                    <input type="text" id="nome" name="nome"><br>
+                    <input type="text" id="nome"><br>
 
                     <label for="ip">Endereço IP:</label>
                     <input type="text" id="ip" name="ip" pattern="\d{1,3}(\.\d{1,3}){3}"><br>
 
-                    <label for="ram">Memória RAM (GB):</label>
-                    <input type="number" id="ram" name="ram"><br>
+                    <label for="memoria">Memória RAM (GB):</label>
+                    <input type="number" id="memoria"><br>
                 </fieldset><br>
                 <fieldset>
                     <legend>Sistema Operacional</legend>
                     <label for="sistema">Sistema:</label>
-                    <select id="nome" name="nome">
+                    <select id="sistema">
                         <optgroup label="Grupo Windows">
                             <option>Windows 11</option>
                             <option>Windows 10</option>
@@ -80,7 +81,8 @@
         <section id="rede">
             <h2>Tabela Técnica de Endereçamento</h2>
             <article>
-                <table border>
+                <h3>Tabela</h3>
+                <table>
                     <thead>
                         <tr>
                             <th>Setor</th>
@@ -122,7 +124,7 @@
                         printf("Digite o seu número: ");
                         scanf("%d", &num);
                         
-                        if((num>=1 && num<=10) || (num<0 && num%3 == 0)){
+                        if((num>=1 && num&lt;=10) || (num&lt;0 && num%3 == 0)){
                             printf("Sim");
                         }else{
                             printf("Não");
@@ -131,29 +133,32 @@
                 </code></pre>
                 <h3>Entradas de Sistema:</h3>
                 <p>Pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> para abrir o gerenciador de tarefas.</p>
-                <p><samp>Erro ao iniciar o servidor <abrr title="Dynamic Host Configuration Protocol">DHCP</samp></p>
+                <p>O servidor é o <abbr title="Dynamic Host Configuration Protocol">DHCP</abbr></p><br>
+                <p><samp>Erro ao iniciar o servidor DHCP</samp></p>
             </article>
         </section>
     </main>
 
     <aside>
         <section id="status">
+            <h2>Status</h2>
             <article>
-                <h2>Status</h2>
+                <h3>Armazenamento e Memória</h3>
                 <label for="ram">RAM:</label>
                 <progress id="ram" value="15" max="100">15%</progress><br>
 
                 <label for="disco">Disco:</label>
                 <meter id="disco" value="0.6">60%</meter>
 
-                <h2>Alertas</h2>
+                <h3>Alertas</h3>
                 <mark>192.168.100.10</mark><br>
                 <mark><strong>Este é um alerta muito importante!</strong></mark>
             </article>
         </section>
         <section id="faq">
-            <h2>Perguntas Frequentes (FAQ)</h2>
+            <h2>Perguntas Frequentes</h2>
             <article>
+                <h3>FAQ</h3>
                 <details>
                     <summary><b>Como faço para fazer isso?</b></summary>
                     <p>É bem simples, você precisa ter em mãos o coiso para fazer login no site.</p>
